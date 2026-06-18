@@ -17,11 +17,20 @@ export default function HomePage() {
       <section className="hero section">
         <div className="container hero__grid">
           <div className="hero__copy">
-            <p className="eyebrow">{portfolio.profile.heroEyebrow}</p>
+            <div className="hero__meta-line">
+              <p className="eyebrow">{portfolio.profile.heroEyebrow}</p>
+              {portfolio.profile.location ? (
+                <p className="context-line hero__location">
+                  <span aria-hidden="true">•</span> {portfolio.profile.location}
+                </p>
+              ) : null}
+            </div>
             <p className="hero__greeting">{portfolio.profile.heroGreeting}</p>
             <h1>{portfolio.profile.name}</h1>
             <p className="hero__role">{portfolio.profile.role}</p>
-            <p className="hero__lede">{portfolio.profile.summary}</p>
+            {portfolio.profile.summary ? (
+              <p className="hero__lede">{portfolio.profile.summary}</p>
+            ) : null}
             <ActionLinks links={heroLinks} />
             <TechStack rows={portfolio.profile.techStackRows} />
           </div>
@@ -90,20 +99,24 @@ export default function HomePage() {
                 </ul>
               </article>
 
-              <article className="panel honors-panel">
-                <p className="eyebrow">Additional honors</p>
-                <ul className="honors-list">
-                  {portfolio.additionalHonors.map((honor) => (
-                    <li key={`${honor.title}-${honor.date}`}>
-                      <div className="honors-list__row">
-                        <strong>{honor.title}</strong>
-                        <span>{honor.date}</span>
-                      </div>
-                      <p>{honor.note}</p>
-                    </li>
-                  ))}
-                </ul>
-              </article>
+              <details className="panel honors-panel">
+                <summary>
+                  <span className="eyebrow">Additional honors</span>
+                </summary>
+                <div className="honors-panel__body">
+                  <ul className="honors-list">
+                    {portfolio.additionalHonors.map((honor) => (
+                      <li key={`${honor.title}-${honor.date}`}>
+                        <div className="honors-list__row">
+                          <strong>{honor.title}</strong>
+                          <span>{honor.date}</span>
+                        </div>
+                        <p>{honor.note}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </details>
             </div>
 
             <div className="recognition-column recognition-column--media">

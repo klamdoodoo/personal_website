@@ -58,6 +58,7 @@ export type Profile = {
   heroEyebrow: string;
   heroGreeting: string;
   role: string;
+  location?: string;
   summary: string;
   email: string;
   github: string;
@@ -144,6 +145,7 @@ export const portfolio: PortfolioData = {
     heroEyebrow: "Open to work",
     heroGreeting: "Hello World, I am ",
     role: "Full-Stack Software Engineer",
+    location: "Based in Los Angeles, CA",
     summary: "",
     email: "khanhlamdo209@gmail.com",
     github: "https://github.com/klamdoodoo",
@@ -202,7 +204,7 @@ export const portfolio: PortfolioData = {
       },
       description: {
         value:
-          "I worked on customer-facing features for BJ's Restaurants, from account security to mobile checkout. My work moved through real QA, code review, and twice-weekly production releases.",
+          "I worked on customer-facing features for the BJ's Restaurants website. My work moved through real QA, code review, and twice-weekly production releases.",
         placeholder:
           "[Add internship description focused on the product, engineering scope, and your role.]",
       },
@@ -220,7 +222,7 @@ export const portfolio: PortfolioData = {
       },
       favoritePart: {
         value:
-          "I asked a lot of questions, and was lucky to work with people who took the time to answer them. Product managers trusted me with real tasks, QA sent me real bugs, and developers walked me through how production systems actually work.",
+          "I asked a lot of questions, and am grateful to work with people who took the time to answer them.",
         placeholder:
           "[Add a short reflection on the best part of this experience]",
       },
@@ -282,25 +284,19 @@ export const portfolio: PortfolioData = {
           caption: "AILA presentation at the 2026 CCRALL conference",
         },
       ],
-      badges: ["Featured project"],
+      badges: ["Artificial Intelligence", "Education"],
       homepageLinks: [
         {
           label: "View presentation",
           href: "https://docs.google.com/presentation/d/1rzngRCJwPNoU-ko0hg8INO3wAMagjnz_ePZqjP9OO8Q/edit?usp=sharing",
           variant: "primary",
+          note: "The production app is tied to Denison authentication, live courses, student data, and paid AI APIs, so the presentation offers a safe look at the full workflow.",
         },
       ],
       mediaAction: {
         label: "View presentation",
         href: "https://docs.google.com/presentation/d/1rzngRCJwPNoU-ko0hg8INO3wAMagjnz_ePZqjP9OO8Q/edit?usp=sharing",
       },
-      notices: [
-        {
-          value:
-            "The production app is tied to Denison authentication, live courses, student data, and paid AI APIs, so the presentation offers a safe look at the full workflow.",
-          placeholder: "",
-        },
-      ],
     },
     {
       slug: "epsilon-indistinguishability",
@@ -336,7 +332,6 @@ export const portfolio: PortfolioData = {
           placeholder: "[Add ε-Indistinguishability research photo]",
           aspectRatio: "1.5",
           position: "50% 36%",
-          caption: "Research team photo",
         },
       ],
       badges: ["Best Paper Award"],
@@ -368,7 +363,7 @@ export const portfolio: PortfolioData = {
           {
             title: "What research taught me",
             paragraphs: [
-              "A lot of this project drawing all over the whiteboard and staring at them in Olin 217 with my teammates. I learned that moving faster does not always mean rushing. Sometimes the best progress comes from slowing down, explaining the idea, and bringing everyone with you.",
+              "A lot of this project involved drawing all over the whiteboard and staring at them in Olin 217 with my teammates. I learned that moving faster does not always mean rushing. Sometimes the best progress comes from slowing down, explaining the idea, and bringing everyone with you.",
               "We had plenty of failed experiments, including runs that took days on the Linux machines before we realized something was wrong. The beginning was rough, but we learned how to communicate, found our rhythm, published the paper, and somehow ended up winning Best Paper!",
             ],
           },
@@ -401,9 +396,9 @@ export const portfolio: PortfolioData = {
           placeholder: "[Add Tidy Turtles screenshot or gameplay image]",
           aspectRatio: "1.5",
           position: "50% 46%",
-          caption: "Gameplay image",
         },
       ],
+      badges: ["Game Development", "Environmental Awareness"],
       homepageLinks: [
         {
           label: "Play game",
@@ -439,15 +434,10 @@ export const portfolio: PortfolioData = {
     school: "Denison University",
     degree: "B.A. in Computer Science (2022 - 2026)",
     minor: "Minor in Digital Humanities",
-    gpa: "GPA 4.00",
     recognitions: [
       {
         title: "Valedictorian, Class of 2026",
         date: "May 2026",
-      },
-      {
-        title: "Phi Beta Kappa",
-        date: "May 2025",
       },
       {
         title: "Gilpatrick Award",
@@ -473,6 +463,11 @@ export const portfolio: PortfolioData = {
     },
   },
   additionalHonors: [
+    {
+      title: "Phi Beta Kappa",
+      date: "May 2025",
+      note: "The oldest and most prestigious academic honor society in the United States",
+    },
     {
       title: "Daniel Donald Bonar Award",
       date: "May 2025",
