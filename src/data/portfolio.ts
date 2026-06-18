@@ -145,7 +145,6 @@ export const portfolio: PortfolioData = {
     heroEyebrow: "Open to work",
     heroGreeting: "Hello World, I am ",
     role: "Full-Stack Software Engineer",
-    location: "Based in Los Angeles, CA",
     summary: "",
     email: "khanhlamdo209@gmail.com",
     github: "https://github.com/klamdoodoo",
